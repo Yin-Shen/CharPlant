@@ -116,7 +116,7 @@ To run Charplant, you need to make a minor revision to the configuration file �
 ```
 genome :  Yourpath/CharPlant/example/oryza_sativa.fa             #Genome file in .fasta format for input(Need full path)
 bed:  Yourpath/CharPlant/example/oryza_sativa.bed                #Open chromatin regions file in .bed format for input(Need full path)
-out: ory                                     #Prefix of the output file
+out: ory                                                         #Prefix of the output file
 ```
 ### (iv) Run CharPlant 
 Snakefile defines rules to performance operations. For each target and intermediate file, we have created rules that defined how they are created from input files. It is not necessary for the users of CharPlant to rewrite it except for executing a single line of command.
