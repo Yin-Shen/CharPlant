@@ -78,7 +78,7 @@ or
 $ git clone https://github.com/Yin-Shen/CharPlant
 ```
 ```
-$ tar –zxvf  CharPlant.tar.gz
+$ tar -zxvf  CharPlant.tar.gz
 $ echo "export PATH=\"${PWD}/CharPlant:\$PATH\" " >>~/.bashrc
 $ source ~/.bashrc
 $ cd CharPlant
