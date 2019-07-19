@@ -140,7 +140,7 @@ If all is successful, you will get the result in the following directory structu
 * **[peak]** The result of predicted OCRs is  saved in it.
 
 
-##Contact us
+## Contact us
 
 **Yin Shen**: 1490025927@qq.com <br>
 **Ling-Ling Chen**: llchen@mail.hzau.edu.cn <br>
