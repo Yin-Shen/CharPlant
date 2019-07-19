@@ -1,0 +1,43 @@
+##Data preprocessing
+genome :  Yourpath/CharPlant/example/oryza_sativa.fa                 #Genome file in fasta format(Need full path).
+bed    :  Yourpath/CharPlant/example/oryza_sativa.bed             #Bed file of Chromatin Accessible Regions for input(Need full path).
+out    : ory                                     #Prefix of the output file
+
+##model_parameter(You can use the default parameters,or custom parameters)
+epochs : 150 #Number of epochs.(default is 150).
+patience : 20 #Number of epochs for early stopping.(default is 20).
+learningrate : 0.001 #Learning rate.(default is 0.001).
+batch_size : 128 #Batch Size.(default is 128).
+dropout : 0.6 #Dropout rate.(default is 0.6).
+nb_filter1 : 200 #Number of filters in first layer ofconvolution.(default is 200).
+nb_filter2 : 100 #Number of filters in second layer of convolution.(default is 100).
+filter_len1 : 19 #Length of filters in first layer of convolution.(default is 19).
+filter_len2 : 11 #Length of filters in second layer of convolution.(default is 11).
+hidden : 200 #units in the fully connected layer.(default is 200).
+
+##motif
+motif_out : Ory #The prefix of motif output folder(example:Ory_motif).
+
+##de_novo_prediction
+prediction_out : split_fasta_36_5_ #The Prefix of the output file(example: split_fasta_36_5_`).
+split_lines : 20000 #The number of lines in a Sliding window cut genome file splited into smaller files (default is 20,000).
+
+##batch_submit_job
+run_type : local #How the python script runs in batches; 
+                 #example:local(run in local); LSF(LSF Cluster management system); PBS(PBS Cluster management system).
+batch_submit_jobs_number : 40 #Number of tasks for a job array in one run;
+                               #The exact number depends on your server performance;
+                               #When you run on a local machine, it is recommended to use 40;
+                               #when you run on LSF or PBS, it is recommended to use 100.
+
+##get_positive_sample
+speices_name : Rice #The name of the species,used when the final fasta file is generated.
+
+##bowtie2_index
+index_name : rice #Your-index-name used in bowtie2.
+
+##bowtie2
+sam_prefix : whole_fasta_36_5 #Sam file prefix(example: whole_fasta_36_5).
+
+##macs2
+peak_prefix : Oryza_sativa    #Call peak file prefix.

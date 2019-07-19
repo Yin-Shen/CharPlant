@@ -1,0 +1,13 @@
+echo "#!/bin/bash"
+echo "cd ../de_novo_prediction"
+echo "MAXINDEX=\`find . -name \"${1}*.py\" |wc -l\`"
+echo "STEP=$2"
+echo "for ((i=1;i<=\${STEP};i++)); do"
+echo "    MY_JOBINDEX=\$(((\${LSB_JOBINDEX}-1)*\${STEP} + \$i))"
+echo "    if [ \${MY_JOBINDEX} -gt \${MAXINDEX} ]; then"
+echo "       break"
+echo "    fi"
+echo "    source activate charplant-cpu"
+echo "    python ${1}\"\${MY_JOBINDEX}\".py"
+echo "done"
+
