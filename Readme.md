@@ -48,7 +48,7 @@ $ source ~/.bashrc
 We use MACS2 (version 2.1.1) for peak calling, and you can find all versions and  user manual [HERE](https://pypi.org/project/MACS2/2.0.10.20130915/#history). 
 ```
 $ wget https://files.pythonhosted.org/packages/0f/e9/60761f3df0634a50a96531fdb00f45dd3a6f3aa2509fb722eb2a665faf35/MACS2-2.1.1.20160226.tar.gz
-$ tar –zxvf  MACS2-2.1.1.20160226.tar.gz
+$ tar -zxvf  MACS2-2.1.1.20160226.tar.gz
 #setup environment variable
 $ conda create --name macs2 python=2.7
 $ source activate macs2
