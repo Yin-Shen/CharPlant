@@ -11,10 +11,10 @@ import keras
 from keras.models import model_from_json
 from keras import backend as K
 import argparse
-
+#specify which GPU(s) to be used
 import os
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 
 #Making large letters out of ordinary text with pyfiglet
