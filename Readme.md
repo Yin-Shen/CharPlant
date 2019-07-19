@@ -28,7 +28,7 @@ Because the de novo prediction  step using cpu, we need create environments in 
 ```
 $ conda create --name charplant-cpu python=3.6
 $ source activate charplant-cpu
-$ conda install sklearn
+$ pip install sklearn
 $ pip install matplotlib
 $ conda install keras
 $ source deactivate charplant-cpu
