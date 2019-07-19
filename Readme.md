@@ -114,8 +114,8 @@ $ python model.py -h
 ### (iii) Set the parameters of CharPlant
 To run Charplant, you need to make a minor revision to the configuration file “config.yaml”. This file is the only one should be modified because it contains all parameters of CharPlant. For the vast majority of the parameters, you just leave them as they are to use the default value we provided. Only three parameters in the following need to be modified. 
 ```
-genome : example/oryza_sativa.fa             #Genome file in .fasta format for input
-bed: example/oryza_sativa.bed                #Open chromatin regions file in .bed format for input
+genome :  Yourpath/CharPlant/example/oryza_sativa.fa             #Genome file in .fasta format for input(Need full path)
+bed:  Yourpath/CharPlant/example/oryza_sativa.bed                #Open chromatin regions file in .bed format for input(Need full path)
 out: ory                                     #Prefix of the output file
 ```
 ### (iv) Run CharPlant 
