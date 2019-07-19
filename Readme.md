@@ -52,7 +52,8 @@ $ tar -zxvf  MACS2-2.1.1.20160226.tar.gz
 #setup environment variable
 $ conda create --name macs2 python=2.7
 $ source activate macs2
-$ cd MACS2-2.1.1.20160226 
+$ cd MACS2-2.1.1.20160226
+$ pip install numpy
 $ python setup.py install 
 #deactivate the environment 
 $ source deactivate macs2
