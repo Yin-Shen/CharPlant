@@ -138,3 +138,9 @@ If all is successful, you will get the result in the following directory structu
 * **[motif]** Motif's positional weight matrix file.
 * **[de_novo_prediction]** Results file for de novo prediction in the whole genome.
 * **[peak]** The result of predicted OCRs is  saved in it.
+
+
+##Contact us
+**Yin Shen**: 1490025927@qq.com
+**Ling-Ling Chen**: llchen@mail.hzau.edu.cn
+**Junxiang Gao**: gao200@mail.hzau.edu.cn
