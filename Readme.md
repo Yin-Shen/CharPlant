@@ -32,6 +32,7 @@ $ conda create --name charplant-cpu python=3.6
 $ source activate charplant-cpu
 $ pip install sklearn
 $ pip install matplotlib
+$ pip install pyfiglet
 $ conda install keras
 $ source deactivate charplant-cpu
 ```
