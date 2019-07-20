@@ -16,14 +16,14 @@ $ echo "export PATH=\"${PWD}/anaconda3/bin:\$PATH\" " >>~/.bashrc
 $ source ~/.bashrc
 ```
 
-### (ii) Install needed python packages using Conda.
+### (ii) Install needed python packages.
 Following Python packages are required:
 * numpy
 * matplotlib
 * pyfiglet
+* sklearn
 * keras
 * tensorflow-gpu
-* sklearn
 
 ### (iii) create environments
 Because the de novo prediction  step using cpu, we need create environments in cpu
