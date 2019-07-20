@@ -74,7 +74,7 @@ To Install and run CharPlant is very easy. You can download the CharPlant packag
 * Simple click to download CharPlant package HERE. 
 * You can also download the CharPlant package using wget or through git.
 ```
-$ wget http://cbi.hzau.edu.cn/piso/charplant/data/CharPlant.tar.gz
+$ wget http://cbi.hzau.edu.cn/CharPlant/data/CharPlant.tar.gz
 ```
 or
 ```
