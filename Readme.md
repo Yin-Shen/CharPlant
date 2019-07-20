@@ -72,7 +72,7 @@ $ pip install snakemake
 ### (i) Download and install CharPlant
 To Install and run CharPlant is very easy. You can download the CharPlant package in  the following two ways. Then un-compress the package and set “charplant” as current directory. 
 
-* Simple click to download CharPlant package HERE. 
+* Simple click to download CharPlant package [HERE](http://cbi.hzau.edu.cn/CharPlant/data/CharPlant.tar.gz). 
 * You can also download the CharPlant package using wget or through git.
 ```
 $ wget http://cbi.hzau.edu.cn/CharPlant/data/CharPlant.tar.gz
