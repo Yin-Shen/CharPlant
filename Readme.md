@@ -16,7 +16,7 @@ $ echo "export PATH=\"${PWD}/anaconda3/bin:\$PATH\" " >>~/.bashrc
 $ source ~/.bashrc
 ```
 
-### (ii) Install needed python packages.
+### (ii) Install needed python packages
 Following Python packages are required:
 * numpy
 * matplotlib
