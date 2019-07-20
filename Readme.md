@@ -1,5 +1,5 @@
 # CharPlant
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3342516.svg)](https://doi.org/10.5281/zenodo.3342516)<br>
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3344779.svg)](https://doi.org/10.5281/zenodo.3344779)<br>
 **CharPlant** currently available for Linux-based platforms. It can learn the OCR features from DNase-seq or ATAC-seq data and de novo predict potential chromatin open regions for plant genome. To train the parameters of the deep learning model and predict OCRs, CharPlant perform the following three steps. Step 1 and step 2 are to  install needed packages and set up running environment of the software, and they are optional for the users have had those packages worked. Step 3 is to download and run CharPlant. We provide as detailed instruction as possible although it can be run using simple command line. In the following, prompt “$” starts a shell command line of  Linux, while “#” starts a comment.
 
 
