@@ -13,5 +13,6 @@ do
         cat $i >> whole_predict;
       done
    fi
+   break
 done
 
