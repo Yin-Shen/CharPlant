@@ -1,5 +1,5 @@
 # CharPlant
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3344779.svg)](https://doi.org/10.5281/zenodo.3344779) <br>
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3344985.svg)](https://doi.org/10.5281/zenodo.3344985) <br>
 
 # Introduction <br>
 The result of OCR (Open Chromatin Region) assay technologies such as DNase-seq and ATAC-seq represents the open state of a tissue at a given time and does not cover all the chromatin accessible information of this species. To predict the potential open regions of different tissues at different times in the whole sequence can help to understand gene transcription and regulation from a global perspective. **CharPlant** (Chromatin Accessible Regions for Plant) is a de novo OCRs prediction tool based on deep learning model. It can take complete DNA sequences or scaffolds as input, and output the outline of OCRs in a .Bed format file rely on sequence features. To our knowledge, this is the first software to de novo predict potential open chromatin regions from DNA sequence and assay data.<br>
