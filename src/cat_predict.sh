@@ -5,13 +5,13 @@ File=`ls whole_predict_fasta*.txt 2>/dev/null |wc -w`
 while [ $File -le ${MAXINDEX} ]
 do
    File=`ls whole_predict_fasta*.txt 2>/dev/null |wc -w`
-   sleep 10
+   if [ $File = ${MAXINDEX} ]
+     then
+      for i in `ls whole_predict_fasta*.txt |sort -V`
+      do
+        echo "File name is: $i";
+        cat $i >> whole_predict;
+      done
+   fi
 done
-if [ $File = ${MAXINDEX} ]
- then
-  for i in `ls whole_predict_fasta*.txt |sort -V`
-  do
-     echo "File name is: $i";
-     cat $i >> whole_predict;
-  done
-fi
+
