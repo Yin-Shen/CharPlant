@@ -143,7 +143,7 @@ If all is successful, you will get the result in the following directory structu
 * **[model]**  .json file of model architecture , .h5 file of model parameters and .png file of the result figure.
 * **[motif]** Motif's positional weight matrix file.
 * **[de_novo_prediction]** Results file for de novo prediction in the whole genome.
-* **[peak]**  \*._peaks.broadPeak of predicted OCRs is  saved in it.
+* **[peak]**  \*_peaks.broadPeak of predicted OCRs is  saved in it.
 
 
 # Contact us
