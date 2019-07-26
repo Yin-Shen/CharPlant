@@ -139,11 +139,11 @@ CharPlant will perform four steps in turn and output the results of predicted OC
 ### (v) Output files
 If all steps are completed, the results will be output to the following five directories.
 ```
-     /data_preprocessing---Data preprocessing results for model training and motif visualization.
-     /model---.json file of model architecture, .h5 file of model parameters and .png file of the result figure.
-     /motif--- Positional weight matrix of motifs.
-     /de_novo_prediction---Results of de novo prediction.
-     /peak---Peaks of predicted OCRs.
+/data_preprocessing---Data preprocessing results for model training and motif visualization.
+/model---.json file of model architecture, .h5 file of model parameters and .png file of the result figure.
+/motif--- Positional weight matrix of motifs.
+/de_novo_prediction---Results of de novo prediction.
+/peak---Peaks of predicted OCRs.
 ```
 
 # Contact us
