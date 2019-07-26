@@ -119,14 +119,14 @@ Or print python scripts help information.
 $ python model.py -h
 ```
 ### (iii) Set the parameters of CharPlant
-Configuration file “config.yaml” contains all parameters of the tool. To run CharPlant, you only need to revise three parameters in the following according to your path and file name, while leave others as they are. A complete “config.yaml” file is shown in next section.
+Configuration file “config.yaml” contains all parameters of the tool. To run CharPlant, you only need to revise three parameters in the following according to your path and file name, while leaving others as they are. A complete “config.yaml” file is shown in next section.
 ```
 genome :  Yourpath/CharPlant/example/oryza_sativa.fa             #Genome file in .fasta format for input(Need full path)
 bed:  Yourpath/CharPlant/example/oryza_sativa.bed                #Open chromatin regions file in .bed format for input(Need full path)
 out: ory                                                         #Prefix of the output file
 ```
 ### (iv) Run CharPlant 
-Snakemake file defines rules to performance operations. We have created rule for each target and intermediate file. It is not necessary for the users to rewrite it. A complete “Snakefile” file is shown in subsequent section.
+Snakemake file defines rules to performance operations. We have created a rule for each target and intermediate file. It is not necessary for the users to rewrite it. A complete “Snakefile” file is shown in subsequent section.
 ```
 $ CharPlant.sh
 ```
