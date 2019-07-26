@@ -148,7 +148,7 @@ If all is successful, you will get the result in the following directory structu
 
 # Contact us
 
-**Yin Shen**: 1490025927@qq.com <br>
+**Yin Shen**: shenyin1995@163.com <br>
 **Ling-Ling Chen**: llchen@mail.hzau.edu.cn <br>
 **Junxiang Gao**: gao200@mail.hzau.edu.cn <br>
 
