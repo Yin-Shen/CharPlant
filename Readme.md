@@ -1,11 +1,11 @@
 # CharPlant
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3344985.svg)](https://doi.org/10.5281/zenodo.3344985) <br>
 # Introduction <br>
-The result of OCR (Open Chromatin Region) assay technologies such as DNase-seq and ATAC-seq represents the open state of a tissue at a given time and does not cover all the chromatin accessible information of this species. To predict the potential open regions of different tissues at different times in the whole sequence can help to understand gene transcription and regulation from a global perspective. **CharPlant** (Chromatin Accessible Regions for Plant) is a de novo OCRs prediction tool based on deep learning model. It can take complete DNA sequences or scaffolds as input, and output the outline of OCRs in a .Bed format file rely on sequence features. To our knowledge, this is the first software to de novo predict potential open chromatin regions from DNA sequence and assay data.<br>
-&emsp;&emsp;When using the tool, kindly acknowledge the project contribution by citing the following papers: Yin Shen, Ling-Ling Chen, and Junxiang Gao*. CharPlant: a de novo prediction tool of chromatin accessible regions for plant genomes. (Submitted to *Plant Biotechnology Journal*)
+The result of OCR (Open Chromatin Region) assay technologies such as DNase-seq and ATAC-seq represents the open state of a tissue at a given time and does not cover all the chromatin accessible information of this species. To predict the potential open regions of different tissues at different times in the whole sequence can help to understand gene transcription and regulation from a global perspective. **CharPlant** (Chromatin Accessible Regions for Plant) is a *de novo* OCRs prediction tool based on deep learning model. It can take complete DNA sequences or scaffolds as input, and output the outline of OCRs in a .Bed format file rely on sequence features. To our knowledge, this is the first tool to *de novo* predict potential open chromatin regions from DNA sequence and assay data.<br>
+&emsp;&emsp;When using the tool, kindly acknowledge the project contribution by citing the following paper: Yin Shen, Ling-Ling Chen, and Junxiang Gao*. CharPlant: a de novo prediction tool of chromatin accessible regions for plant genomes. (Submitted to *Plant Biotechnology Journal*)
 
 # Steps to install and run CharPlant <br>
-CharPlant currently available for Linux-based platforms. It can learn the OCR features from DNase-seq or ATAC-seq data and de novo predict potential chromatin open regions for plant genome. To train the parameters of the deep learning model and predict OCRs, CharPlant perform the following three steps. Step 1 and step 2 are to  install needed packages and set up running environment of the software, and they are optional for the users have had those packages worked. Step 3 is to download and run CharPlant. We provide as detailed instruction as possible although it can be run using simple command line. In the following, prompt “$” starts a shell command line of  Linux, while “#” starts a comment.
+CharPlant currently available for Linux-based platforms. It can learn the OCR features from DNase-seq or ATAC-seq data and *de novo* predict potential chromatin open regions for plant genome. To train the parameters of the deep learning model and predict OCRs, CharPlant perform the following three steps. Step 1 and step 2 are to  install needed packages and set up running environment of the software, and they are optional for the users have had those packages worked. Step 3 is to download and run CharPlant. We provide as detailed instruction as possible although it can be run using simple command line. In the following, prompt “$” starts a shell command line of  Linux, while “#” starts a comment.
 
 ## Step 1. Install python packages
 CharPlant is developed in python language, and some fundamental packages for  scientific computing and network construction are indispensable. To efficient install and manage them, we strongly recommend using the **Conda** package manager. Conda is an open source package and environment management system for installing multiple versions of packages and their dependencies and easily switching between them.
@@ -29,7 +29,7 @@ Following Python packages are required:
 * tensorflow-gpu
 
 ### (iii) create environments
-Because the de novo prediction  step using cpu, we need create environments in cpu
+Because the *de novo* prediction  step using cpu, we need create environments in cpu
 ```
 $ conda create --name charplant-cpu python=3.6
 $ source activate charplant-cpu
@@ -73,7 +73,7 @@ $ pip install snakemake
 ## Step 3. Download and run CharPlant
 
 ### (i) Download and install CharPlant
-To Install and run CharPlant is very easy. You can download the CharPlant package in  the following two ways. Then un-compress the package and set “charplant” as current directory. 
+To Install and run CharPlant is very easy. You can download the CharPlant package in  the following two ways. Then un-compress the package and set “CharPlant” as current directory. 
 
 * Simple click to download CharPlant package [HERE](http://cbi.hzau.edu.cn/CharPlant/data/CharPlant.tar.gz). 
 * You can also download the CharPlant package using wget or through git.
@@ -119,14 +119,14 @@ Or print python scripts help information.
 $ python model.py -h
 ```
 ### (iii) Set the parameters of CharPlant
-To run Charplant, you need to make a minor revision to the configuration file “config.yaml”. This file is the only one should be modified because it contains all parameters of CharPlant. For the vast majority of the parameters, you just leave them as they are to use the default value we provided. Only three parameters in the following need to be modified. 
+Configuration file “config.yaml” contains all parameters of the tool. To run CharPlant, you only need to revise three parameters in the following according to your path and file name, while leave others as they are. A complete “config.yaml” file is shown in next section.
 ```
 genome :  Yourpath/CharPlant/example/oryza_sativa.fa             #Genome file in .fasta format for input(Need full path)
 bed:  Yourpath/CharPlant/example/oryza_sativa.bed                #Open chromatin regions file in .bed format for input(Need full path)
 out: ory                                                         #Prefix of the output file
 ```
 ### (iv) Run CharPlant 
-Snakefile defines rules to performance operations. For each target and intermediate file, we have created rules that defined how they are created from input files. It is not necessary for the users of CharPlant to rewrite it except for executing a single line of command.
+Snakemake file defines rules to performance operations. We have created rule for each target and intermediate file. It is not necessary for the users to rewrite it. A complete “Snakefile” file is shown in subsequent section.
 ```
 $ CharPlant.sh
 ```
@@ -134,16 +134,15 @@ CharPlant will perform four steps in turn and output the results of predicted OC
 * **Data preprocessing**
 * **Model training**
 * **Motif visualization**
-* **De novo predicton**
+* ***De novo* predicton**
 
 ### (v) Output files
-If all is successful, you will get the result in the following directory structure.
-
-* **[data_preprocessing]** Data preprocessing Results file for model training and motif visualization.
-* **[model]**  .json file of model architecture , .h5 file of model parameters and .png file of the result figure.
-* **[motif]** Motif's positional weight matrix file.
-* **[de_novo_prediction]** Results file for de novo prediction in the whole genome.
-* **[peak]**  \*_peaks.broadPeak of predicted OCRs is  saved in it.
+If all steps are completed, the results will be output to the following five directories.
+     /data_preprocessing---Data preprocessing results for model training and motif visualization.
+     /model---.json file of model architecture, .h5 file of model parameters and .png file of the result figure.
+     /motif--- Positional weight matrix of motifs.
+     /de_novo_prediction---Results of *de novo* prediction.
+     /peak---Peaks of predicted OCRs.
 
 
 # Contact us
