@@ -82,7 +82,7 @@ $ wget http://cbi.hzau.edu.cn/CharPlant/data/CharPlant.tar.gz
 ```
 or
 ```
-$ git clone https://github.com/Yin-Shen/CharPlant
+$ git clone https://github.com/Yin-Shen/CharPlant.git
 ```
 ```
 $ tar -zxvf  CharPlant.tar.gz
