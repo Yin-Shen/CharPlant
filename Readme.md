@@ -1,4 +1,4 @@
-!(http://cbi.hzau.edu.cn/CharPlant/img/logo.jpg)
+![logo](http://cbi.hzau.edu.cn/CharPlant/img/logo.jpg)
 # CharPlant
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3344985.svg)](https://doi.org/10.5281/zenodo.3344985) <br>
 # Introduction <br>
