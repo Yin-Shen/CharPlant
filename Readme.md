@@ -135,7 +135,7 @@ CharPlant will perform four steps in turn and output the results of predicted OC
 * **Data preprocessing**
 * **Model training**
 * **Motif visualization**
-* ***De novo* predicton**
+* ***De novo* prediction**
 
 ### (v) Output files
 If all steps are completed, the results will be output to the following five directories.
