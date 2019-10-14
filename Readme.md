@@ -84,7 +84,6 @@ To Install and run CharPlant is very easy. You can download the CharPlant packag
 $ git clone https://github.com/Yin-Shen/CharPlant.git
 ```
 ```
-$ tar -zxvf  CharPlant.tar.gz
 $ echo "export PATH=\"${PWD}/CharPlant:\$PATH\" " >>~/.bashrc
 $ source ~/.bashrc
 $ cd CharPlant
