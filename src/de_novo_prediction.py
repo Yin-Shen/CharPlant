@@ -41,7 +41,7 @@ o=open(args.out,'w')
 len_chrom={}
 for key,val in fasta.items():
         len_chrom[key]=len(fasta[key])
-        for i in range(0,len_chrom[key],5):
+        for i in range(0,len_chrom[key],1):
           if i+36<=int(len_chrom[key]):
              o.write(key+'\t'+str(i)+'\t'+str(i+36)+'\t'+fasta[key][i:i+36]+'\n')
           else:
@@ -54,7 +54,7 @@ print("\033[1;30;34m%s\033[0m" %"well done...")
 print("\033[1;30;34m%s\033[0m" %"Split genome file according to multi-line...")
 print("\033[1;30;34m%s\033[0m" %"please wait...")
 splitLen = int(args.lines) 
-output_prefix = args.out        # example: split_fasta_36_5_
+output_prefix = args.out        # example: split_fasta_36_1_
 
 input = open(args.out, 'r').read().split('\n')
 
