@@ -101,5 +101,5 @@ rule macs2:
     priority: 10
     threads: 16
     shell:
-          "cd $PWD/peak && source activate macs2 && macs2 callpeak -t {params.sam_prefix}.sam  -f SAM --broad -g hs --broad-cutoff 0.2 -n {params.peak_prefix} "
+          "cd $PWD/peak && source activate macs2 && macs2 callpeak -t {params.sam_prefix}.sam  -f SAM --shift -125 --extsize 250 --nomodel -B --SPMR -g hs -n {params.peak_prefix} "
          
