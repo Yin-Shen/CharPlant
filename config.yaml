@@ -21,7 +21,7 @@ motif_out : Ory #The prefix of motif output folder(example:Ory_motif).
 ##de_novo_prediction
 prediction_out : split_fasta_36_1_ #The Prefix of the output file(example: split_fasta_36_1_`).
 split_lines : 20000 #The number of lines in a Sliding window cut genome file splited into smaller files (default is 20,000).
-
+threshold : 0.5 #the threshold adopted to assign positive predictions (default is 0.5)
 ##batch_submit_job
 run_type : local #How the python script runs in batches; 
                  #example:local(run in local); LSF(LSF Cluster management system); PBS(PBS Cluster management system).
