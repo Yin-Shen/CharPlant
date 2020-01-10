@@ -45,10 +45,11 @@ rule de_novo_prediction:
          genome=expand("{sample}", sample=config["genome"]),
      params:         
          prediction_out=config["prediction_out"],
-         split_lines=config["split_lines"]          
+         split_lines=config["split_lines"],
+         threshold=config["threshold"]
      priority: 70
      shell:
-         "mkdir $PWD/de_novo_prediction && cd $PWD/de_novo_prediction && python ../src/de_novo_prediction.py -g {input.genome} -l {params.split_lines} -o {params.prediction_out}"
+         "mkdir $PWD/de_novo_prediction && cd $PWD/de_novo_prediction && python ../src/de_novo_prediction.py -g {input.genome} -l {params.split_lines} -t {params.threshold} -o {params.prediction_out}"
 
 
 rule batch_submit_job:
