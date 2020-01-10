@@ -19,6 +19,8 @@ parser.add_argument("--genome", "-g", required=True,
                     help="genome file in fasta format")
 parser.add_argument("--lines", "-l",default=20000, type=int, required=False,
                     help="The number of lines in a Sliding window cut genome file splited into smaller files (default is 20,000)")
+parser.add_argument("--threshold", "-t",default=0.5, type=float, required=False,
+                    help="the threshold adopted to assign positive predictions (default is 0.5)")
 parser.add_argument("--out", "-o", required=True,    
                     help="prefix of the output file")  
 args = parser.parse_args()
@@ -132,7 +134,13 @@ def loading_data1(filename):
 '''
 
 python_file_2 = '''
-for i in results.tolist():
+result_new=np.empty((results.shape[0],1),dtype='int32')
+for i in range(result_new.shape[0]):
+         if results[i] >= args.threshold:
+            result_new[i] = np.array([1], dtype='int32')
+         else:
+            result_new[i] = np.array([0], dtype = 'int32')
+for i in result_new.tolist():
    o.write(str(i)+"\\n")    
 o.close()
 '''
