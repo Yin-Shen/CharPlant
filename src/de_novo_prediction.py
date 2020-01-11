@@ -104,8 +104,6 @@ sort_file_list = sort_humanly(file_list)
 
 
 python_file_1='''
-import numpy as np
-import re
 
 def loading_data1(filename):
     f=open(filename,'r')
@@ -136,7 +134,7 @@ def loading_data1(filename):
 python_file_2 = '''
 result_new=np.empty((results.shape[0],1),dtype='int32')
 for i in range(result_new.shape[0]):
-         if results[i] >= args.threshold:
+         if results[i] >= %(threshold)s:
             result_new[i] = np.array([1], dtype='int32')
          else:
             result_new[i] = np.array([0], dtype = 'int32')
@@ -146,6 +144,6 @@ o.close()
 '''
 for file in sort_file_list:
     file_read = open(file_path+"/"+file+'.py', 'w')
-    file_read.write('from keras.models import model_from_json'+'\n'+"model = model_from_json(open('"+model_architecture_path+"').read())"+'\n'+"model.load_weights('"+model_weights_path+"')"+'\n'+python_file_1+'\n'+"data=loading_data1('"+file+"')"+'\n'+'results=model.predict_classes(data)'+'\n'+"o=open('whole_predict_fasta"+file+".txt','w')"+'\n'+python_file_2+'\n')    
+    file_read.write('import numpy as np'+'\n'+'import re'+'\n'+'from keras.models import model_from_json'+'\n'+"model = model_from_json(open('"+model_architecture_path+"').read())"+'\n'+"model.load_weights('"+model_weights_path+"')"+'\n'+python_file_1+'\n'+"data=loading_data1('"+file+"')"+'\n'+'results=model.predict_classes(data)'+'\n'+"o=open('whole_predict_fasta"+file+".txt','w')"+'\n'+python_file_2%dict(threshold=args.threshold)+'\n')    
     file_read.close()
 print("\033[1;30;34m%s\033[0m" %"well done...")
