@@ -69,7 +69,7 @@ $ source deactivate macs2
 ### (iii)Snakemake
 We adopt an easy-to-use workflow software Snakemake to build our analysis  process, which combines a series of steps into a single pipeline. Snakemake and the  manual are provided in this [LINK](https://snakemake.readthedocs.io/en/stable/index.html). 
 ```
-$ pip install snakemake==5.5.3
+$ pip install snakemake==5.5.2
 ```
 
 ## Step 3. Download and run CharPlant
