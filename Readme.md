@@ -23,12 +23,13 @@ $ source ~/.bashrc
 
 ### (ii) Install needed python packages
 Following Python packages are required:
-* numpy
-* matplotlib
-* pyfiglet
-* sklearn
-* keras
-* tensorflow-gpu
+* numpy(1.16.1)
+* matplotlib(3.3.2)
+* pyfiglet(0.8.post1)
+* sklearn(0.22)
+* keras(2.0.5)
+* h5py(2.7.1)
+* tensorflow-gpu(1.3.0)
 
 ### (iii) create environments
 Because the *de novo* prediction  step using cpu, we need create environments in cpu
